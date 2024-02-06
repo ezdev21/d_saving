@@ -1,13 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState,useEffect } from "react";
 import { RiLockPasswordLine, RiPhoneFill } from "react-icons/ri";
 import { LiaLongArrowAltRightSolid } from "react-icons/lia";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { ZodType, z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import api from '../../lib/api'
+import { useRouter } from "next/navigation";
 
 interface LoginForm {
   phone: number;
@@ -20,6 +22,8 @@ const loginSchema: ZodType<LoginForm> = z.object({
 });
 
 export default function Signin() {
+  const router = useRouter()
+
   const {
     register,
     handleSubmit,
@@ -29,7 +33,14 @@ export default function Signin() {
 
   const onSubmit = async (data: LoginForm) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    // console.log(data)
+    api.post('/login',data)
+    .then(res=>{
+      localStorage.setItem("token", JSON.stringify(res.data));
+      router.push('/admin')
+    })
+    .catch(err=>{
+      console.log('error')
+    })
     reset();
   };
 

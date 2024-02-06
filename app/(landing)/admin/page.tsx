@@ -1,15 +1,28 @@
 "use client"
 
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import Dashboard from "./Dashboard";
 import Deposite from "./Deposite";
 import Transaction from "./Transaction";
+import api from "@/lib/api";
 
+interface User{
+  id: number,
+  name: string,
+  email: string,
+  phone: string,
+}
 
 const Page = () => {
 
   const [activeItem, setActiveItem] = useState<string>('dashboard');
-
+  const [user,setUser] = useState({})
+  useEffect(()=>{
+    api.get('/api/user')
+    .then(res=>{
+      setUser(res.data)
+    })
+  },[]) 
   // Function to handle menu item click
   const handleMenuItemClick = (itemName: string) => {
     setActiveItem(itemName);
@@ -36,7 +49,7 @@ const Page = () => {
             </div>
             <div>
               <p className="font-medium group-hover:text-indigo-400 leading-4">
-                Berhanu
+                {user.name}
               </p>
               <span className="text-xs text-slate-400">Admin</span>
             </div>

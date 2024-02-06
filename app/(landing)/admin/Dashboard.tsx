@@ -1,7 +1,21 @@
-import React from "react";
+"use client";
+
+import React, {useEffect, useState} from "react";
 import { AiOutlineEdit, AiOutlineLock, AiOutlineDelete, AiOutlineDatabase, AiOutlineHome, AiOutlineTransaction, AiOutlineUser } from "react-icons/ai";
+import api from '../../../lib/api'
+
+interface User{
+  name:string
+}
 
 const Dashboard = () => {
+  const [user,setUser] = useState({})
+  useEffect(()=>{
+    api.get('/api/user')
+    .then(res=>{
+      setUser(res.data)
+    })
+  },[])
   return (
     <>
       <div id="24h">

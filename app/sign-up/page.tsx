@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 import {
   RiUserAddLine,
   RiLockPasswordLine,
@@ -11,32 +11,36 @@ import {
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import api from '../../lib/api'
+import { useRouter } from "next/navigation";
 
 interface LoginForm {
   phone: number;
   email: string;
   password: string;
-  fullname: string;
-  confirmPassword: string;
+  name: string;
+  password_confirmation: string;
 }
 
 const signUpSchema = z
   .object({
-    fullname: z.string().min(5, "Fullname must be at least 5 characters"),
+    // name: z.string().min(4, "Fullname must be at least 4 characters"),
     phone: z
       .number()
       .min(10, "Invalid Phone number"),
 
     email: z.string().email(),
     password: z.string().min(8, "Password must be at least 8 characters"),
-    confirmPassword: z.string(),
+    password_confirmation: z.string(),
   })
-  .refine((data) => data.password === data.confirmPassword, {
+  .refine((data) => data.password === data.password_confirmation, {
     message: "Passwords must match",
-    path: ["confirmPassword"],
+    path: ["password_confirmation"],
   });
 
 export default function Signup() {
+  const router = useRouter()
+  const [errorMessage,setErrorMessage] =useState("")
   const {
     register,
     handleSubmit,
@@ -48,7 +52,21 @@ export default function Signup() {
 
   const onSubmit = async (data: LoginForm) => {
     await new Promise((resolve) => setTimeout(resolve, 1000));
-    console.log(data);
+    api.post('/register',data)
+    .then(res=>{
+      if(res.status<300){
+        router.push('/sign-in')
+      }
+      else{
+        setErrorMessage('')
+      }
+      if(res.status==422){
+        setErrorMessage("")
+      }
+    })
+    .catch(err=>{
+      setErrorMessage("Server Error! can not register")
+    })
     reset();
   };
 
@@ -65,7 +83,7 @@ export default function Signup() {
           <h2 className="text-4xl font-bold text-center py-6">
             Digital Saving
           </h2>
-
+          <p className="text-red-500" >{errorMessage}</p>
           <div className="flex flex-col py-2">
             <label>
               <RiUserAddLine className="inline-block mr-2" /> Fullname
@@ -74,7 +92,7 @@ export default function Signup() {
               className="border p-2"
               type="text"
               placeholder="Full name"
-              {...register("fullname")}
+              {...register("name")}
             />
 
             {errors.fullname && (
@@ -135,10 +153,10 @@ export default function Signup() {
               className="border p-2"
               type="password"
               placeholder="Confirm password"
-              {...register("confirmPassword")}
+              {...register("password_confirmation")}
             />
-            {errors.confirmPassword && (
-              <p className="text-red-500">{`${errors.confirmPassword.message}`}</p>
+            {errors.password_confirmation && (
+              <p className="text-red-500">{`${errors.password_confirmation.message}`}</p>
             )}
           </div>
           <button
