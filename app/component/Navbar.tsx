@@ -1,5 +1,4 @@
 "use client";
-import { SiWebmoney } from "react-icons/si";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -17,47 +16,49 @@ const Navbar = () => {
 
   return (
     <>
-      <header className="top-0 left-0 w-full fixed z-[9999] py-5 md:px-8 px-4 bg-white border-b">
+      <header className="top-0 left-0 w-full fixed z-[9999] py-5 md:px-8 px-4 bg-white border-b bg-opacity-95">
         <div className="container mx-auto">
           <div className="flex justify-between items-center">
-            <div className="xl:pl-10">
-              <Link href={"/"} className="text-xl font-semibold text-slate-950">
-                <SiWebmoney size={40}  className="text-indigo-700"/>
+            <div className="xl:pl-4">
+              <Link href={"/"} className="text-xl font-semibold text-slate-950 flex justify-center items-center gap-3">
+                <Image
+                  src={"/berhan.jpg"}
+                  width={400}
+                  height={200}
+                  alt="Berhan logo"
+                  className="w-14 h-14 rounded-xl"
+                />
+                <p className="uppercase text-2xl">Berhan</p>
               </Link>
             </div>
 
             {/* Navigation Menu  */}
 
             <div className="hidden lg:block">
-              <ul className="flex space-x-14 font-sans">
+              <ul className="flex space-x-10 font-sans justify-center items-center">
                 {nav_links.map((item, index) => (
                   <li key={item.key}>
                     <Link
                       href={item.href}
                       className={
                         pathname === item.href
-                          ? "text-slate-700  font-bold uppercase"
-                          : "text-slate-700 hover:text-indigo-500 hover:font-semibold ease-in-out duration-300 font-sans uppercase"
+                          ? "text-yellow-500 font-bold uppercase font-sans"
+                          : "text-yellow-600 hover:text-yellow-500 hover:font-semibold ease-in-out duration-300 font-sans uppercase"
                       }
                     >
                       {item.label}
                     </Link>
                   </li>
                 ))}
+                <Link href={"/contact"} className="hidden lg:flex gap-4">
+                  <button className=" border py-4 px-10 bg-yellow-500 hover:bg-yellow-600 text-slate-50 rounded-full font-bold text-md hover:text-slate-100">
+                    Contact us
+                  </button>
+                </Link>
               </ul>
             </div>
-            <div className="font-sans text-sm flex gap-2">
-              <Link href={"/sign-in"} className="hidden lg:flex gap-4">
-                <button className=" border py-4 px-10 border-indigo-700 text-indigo-700 rounded-md font-bold text-md hover:text-indigo-500">
-                  Sign in
-                </button>
-              </Link>
-              <Link href={"/sign-up"} className="hidden lg:flex gap-4">
-                <button className=" border py-4 px-10 bg-indigo-700 text-white rounded-md font-bold text-md hover:bg-indigo-500">
-                  Sign up
-                </button>
-              </Link>
-              <button className="block lg:hidden" onClick={navHandle}>
+            <div className="block lg:hidden font-sans text-sm gap-2">
+              <button className="" onClick={navHandle}>
                 {!nav ? (
                   <HiBars3 size={35} className="text-black" />
                 ) : (
@@ -80,12 +81,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-center py-3">
           <Link href={"/"}>
-            <Image
-              src={"/"}
-              width={200}
-              height={200}
-              alt="Image"
-            />
+            <Image src={"/berhan.jpg"} width={200} height={200} alt="Image" className="w-14 h-14 rounded-xl"/>
           </Link>
         </div>
 

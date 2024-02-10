@@ -1,163 +1,144 @@
-import React from "react";
-function Index() {
+"use client";
+
+import { TiLocation } from "react-icons/ti";
+import { MdEmail, MdCall, MdShare } from "react-icons/md";
+import {
+  AiFillGithub,
+  AiOutlineLinkedin,
+  AiOutlineTwitter,
+} from "react-icons/ai";
+import { FaTelegramPlane } from "react-icons/fa";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import Form from "@/app/component/Form";
+
+const Contact = () => {
   return (
-    <div className="mx-auto pt-32 p-10 ">
-      <div className="lg:flex">
-        <div className="xl:w-2/5 lg:w-2/5 bg-indigo-700 py-16 xl:rounded-bl rounded-tl rounded-tr xl:rounded-tr-none">
-          <div className="xl:w-5/6 xl:px-0 px-8 mx-auto">
-            <h1 className="xl:text-4xl text-3xl pb-4 text-white font-bold">
-              Get in touch
-            </h1>
-            <p className="text-xl text-white pb-8 leading-relaxed font-normal lg:pr-4">
-              Got a question about us? Are you interested in partnering with us?
-              Have some suggestions or just want to say Hi? Just contact us. We
-              are here to asset you.
-            </p>
-            <div className="flex pb-4 items-center">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-phone-call"
-                  width={20}
-                  height={20}
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="#ffffff"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" />
-                  <path d="M4 4h5l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v5a1 1 0 0 1 -1 1a16 16 0 0 1 -16 -16a1 1 0 0 1 1 -1" />
-                  <path d="M15 7a2 2 0 0 1 2 2" />
-                  <path d="M15 3a6 6 0 0 1 6 6" />
-                </svg>
+    <div className="w-full text-white">
+      <motion.div
+        initial={{ opacity: 0, y: 80, x: 0 }}
+        animate={{ opacity: 1, y: 0, x: 0 }}
+        transition={{ duration: 1, delay: 0 }}
+      >
+        <div className="mx-5 md:mx:24 lg:mx-32 my-12">
+          <h1 className="font font-extrabold text-4xl font-sans mb-10">
+            CONTACT{" "}
+            <span className="font-sans border-b border-yellow-500 pb-1 pr-10">
+              ME
+            </span>
+          </h1>
+          <div className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
+            <div className="bg-zinc-50 px-4 flex items-center h-28">
+              <div className="bg-zinc-100 p-3 rounded-full">
+                <i className="text-yellow-500">
+                  <TiLocation size={25} />{" "}
+                </i>
               </div>
-              <p className="pl-4 text-white text-base">+251 911 321 321</p>
-            </div>
-            <div className="flex items-center">
-              <div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="icon icon-tabler icon-tabler-mail"
-                  width={20}
-                  height={20}
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="#FFFFFF"
-                  fill="none"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path stroke="none" d="M0 0h24v24H0z" />
-                  <rect x={3} y={5} width={18} height={14} rx={2} />
-                  <polyline points="3 7 12 13 21 7" />
-                </svg>
+              <div className="px-5">
+                <h2 className="pb-2 text-xl font-sans font-bold text-gray-700">
+                  Our Address
+                </h2>
+                <p className="font-sans text-gray-500 text-sm">
+                  {" "}
+                  Addis Ababa, Ethiopia
+                </p>
               </div>
-              <p className="pl-4 text-white text-base">
-                Info@digitalsaving.com
-              </p>
             </div>
-            <p className="text-lg text-white pt-10 tracking-wide">
-              Addis Ababa, Ethiopia
-            </p>
+
+            <div className="bg-zinc-50 px-4 flex items-center h-28">
+              <div className="bg-zinc-100 p-3 rounded-full">
+                <i className="text-yellow-500">
+                  <MdCall size={25} />{" "}
+                </i>
+              </div>
+              <div className="px-5">
+                <h2 className="pb-2 text-xl font-sans font-bold text-gray-700">
+                  Contact us
+                </h2>
+                <p className="font-sans text-gray-500 text-sm">
+                  {" "}
+                  +251-900-578275 <br /> +251-938-071193
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-zinc-50 px-4 flex items-center h-28">
+              <div className="bg-zinc-100 p-3 rounded-full">
+                <i className="text-yellow-500">
+                  <MdEmail size={25} />{" "}
+                </i>
+              </div>
+              <div className="px-5">
+                <h2 className="pb-2 text-xl font-sans font-bold text-gray-700">
+                  Email us
+                </h2>
+                <p className="font-sans text-gray-500 text-sm">
+                  {" "}
+                  berhanplatform7@gmial.com
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-zinc-50 px-4 flex items-center h-28">
+              <div className="bg-zinc-100 p-3 rounded-full">
+                <i className="text-yellow-500">
+                  <MdShare size={25} />{" "}
+                </i>
+              </div>
+              <div className="px-5">
+                <h2 className="pb-2 text-xl font-sans font-bold text-gray-700">
+                  Social links
+                </h2>
+                <div className="flex gap-3 ">
+                  <Link
+                    href="https://github.com/halas77"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="text-gray-400 hover:text-yellow-500 ease-in-out duration-300">
+                      <AiFillGithub size={23} />
+                    </div>
+                  </Link>
+                  <Link
+                    href="https://www.linkedin.com/in/dawit-mellese-670b90254/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="text-gray-400 hover:text-yellow-500 ease-in-out duration-300">
+                      <AiOutlineLinkedin size={23} />
+                    </div>
+                  </Link>
+                  <Link
+                    href="https://twitter.com/Halas9550443467"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="text-gray-400 hover:text-yellow-500 ease-in-out duration-300">
+                      <AiOutlineTwitter size={23} />
+                    </div>
+                  </Link>
+
+                  <Link
+                    href="https://t.me/dawitmellese"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div className="text-gray-400 hover:text-yellow-500 ease-in-out duration-300">
+                      <FaTelegramPlane size={23} />
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          <div className="mt-6">
+            <Form />
           </div>
         </div>
-        <div className="xl:w-3/5 lg:w-3/5 bg-gray-100 h-full pt-5 pb-5 xl:pr-5 xl:pl-0 rounded-tr rounded-br">
-          <form
-            id="contact"
-            className="bg-gray-100 py-4 px-8 rounded-tr rounded-br"
-          >
-            <h1 className="text-4xl text-gray-800 font-extrabold mb-6">
-              Enter Details
-            </h1>
-            <div className="block xl:flex w-full flex-wrap justify-between mb-6">
-              <div className="w-2/4 max-w-xs mb-6 xl:mb-0">
-                <div className="flex flex-col">
-                  <label
-                    htmlFor="full_name"
-                    className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2"
-                  >
-                    Full Name
-                  </label>
-                  <input
-                    required
-                    id="full_name"
-                    name="full_name"
-                    type="text"
-                    className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
-                    placeholder=""
-                  />
-                </div>
-              </div>
-              <div className="w-2/4 max-w-xs xl:flex xl:justify-start">
-                <div className="flex flex-col">
-                  <label
-                    htmlFor="email"
-                    className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2"
-                  >
-                    Email
-                  </label>
-                  <input
-                    required
-                    id="email"
-                    name="email"
-                    type="email"
-                    className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
-                    placeholder=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="flex w-full flex-wrap">
-              <div className="w-2/4 max-w-xs">
-                <div className="flex flex-col">
-                  <label
-                    htmlFor="phone"
-                    className="text-gray-800 text-sm font-semibold leading-tight tracking-normal mb-2"
-                  >
-                    Phone
-                  </label>
-                  <input
-                    required
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    className="focus:outline-none focus:border focus:border-indigo-700 font-normal w-64 h-10 flex items-center pl-3 text-sm border-gray-300 rounded border"
-                    placeholder=""
-                  />
-                </div>
-              </div>
-            </div>
-            <div className="w-full mt-6">
-              <div className="flex flex-col">
-                <label
-                  className="text-sm font-semibold text-gray-800 mb-2"
-                  htmlFor="message"
-                >
-                  Message
-                </label>
-                <textarea
-                  placeholder=""
-                  name="message"
-                  className="border-gray-300 border mb-4 rounded py-2 text-sm outline-none resize-none px-3 focus:border focus:border-indigo-700"
-                  rows={8}
-                  id="message"
-                  defaultValue={""}
-                />
-              </div>
-              <button
-                type="submit"
-                className="focus:outline-none bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 rounded text-white px-8 py-3 text-sm leading-6"
-              >
-                Submit
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
+      </motion.div>
     </div>
   );
-}
+};
 
-export default Index;
+export default Contact;

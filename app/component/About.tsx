@@ -1,147 +1,73 @@
-const Index = () => (
-  <div className="overflow-y-hidden bg-gray-100">
-    <div className="mx-auto container f-f-p px-4 xl:px-0 py-24">
-      <h1 className="focus:outline-none text-center text-3xl lg:text-4xl font-extrabold lg:leading-9 tracking-wider text-gray-900">
-        How it works?
-      </h1>
-      <div className="md:mt-24 f-f-p">
-        <div className="hidden md:flex justify-center w-full">
-          <div className="flex flex-col items-center md:items-end md:pr-12 md:border-r-4 border-gray-300 relative md:w-1/2">
-            <div aria-label="sign up" role="img">
-              <img
-                className="focus:outline-none mt-10"
-                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg1.svg"
-                alt="how it work"
-              />
-            </div>
-            <div role="img">
-              <img
-                className="focus:outline-none mt-24"
-                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg2.svg"
-                alt=""
-              />
-            </div>
-            <div className="flex mt-12 flex-col items-center lg:items-end md:w-8/12">
-              <h1 className="focus:outline-none text-xl font-bold leading-5">
-                Create a Wallet
-              </h1>
-              <h2 className="focus:outline-none text-gray-500 mt-3 pl-3 text-center md:text-right text-base leading-6 tracking-wide">
-                Create a wallet by linking a payment method that you’re
-                comfortable with. tele birr, CBE and more{" "}
-              </h2>
-            </div>
-            <div aria-label="transactions" role="img">
-              <img
-                className="focus:outline-none mt-24"
-                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg3.svg"
-                alt=""
-              />
-            </div>
-            <img
-              className="hidden md:block absolute right-0 top-0 -mt-2 -mr-1"
-              src="https://cdn.tuk.dev/assets/components/111220/Fs7/line.png"
-              alt=""
-            />
-          </div>
-          <div className="flex flex-col items-center md:items-start md:pl-12 lg:border-gray-400 mt-20 md:mt-0 md:w-1/2">
-            <div role="img">
-              <img
-                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg4.svg"
-                alt=""
-              />
-            </div>
-            <div className="flex mt-6 flex-col items-center md:items-start md:w-8/12">
-              <h1 className="focus:outline-none text-xl font-bold leading-5">
-                SignUp for an Account
-              </h1>
-              <h2 className="focus:outline-none text-gray-500 mt-3 text-base leading-6 tracking-wide">
-                Sign up on our website and opt for a program that suits you the
-                best .{" "}
-              </h2>
-            </div>
-            <div aria-label="wallet" role="img">
-              <img
-                className="focus:outline-none mt-32"
-                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg5.svg"
-                alt=""
-              />
-            </div>
-            <div role="img">
-              <img
-                className="focus:outline-none mt-20"
-                src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg6.svg"
-                alt=""
-              />
-            </div>
-            <div className="flex mt-6 flex-col items-center md:items-start md:w-8/12">
-              <h1 className="focus:outline-none text-xl font-bold leading-5">
-                Start your Transactions
-              </h1>
-              <h2 className="focus:outline-none text-gray-500 mt-3 text-base leading-6 tracking-wide">
-                Start transactions right away. No more complicated process for
-                anything else.
-              </h2>
-            </div>
-          </div>
+import React from "react";
+import { FaTelegram, FaLinkedin, FaMailchimp } from "react-icons/fa";
+import { AiFillMail } from "react-icons/ai";
+import { team_data } from "@/constants";
+
+
+
+function Index() {
+  return (
+    <div>
+      <div className="container flex justify-center mx-auto pt-16">
+        <div>
+          <p className="text-gray-500 text-lg text-center font-normal pb-3">
+            BUILDING TEAM
+          </p>
+          <h1 className="xl:text-4xl text-3xl text-center text-gray-800 font-extrabold pb-6 sm:w-4/6 w-5/6 mx-auto">
+            The Talented People Behind the Scenes of the Organization
+          </h1>
         </div>
-        <div className="md:hidden flex flex-col items-center w-full">
-          <img
-            className="focus:outline-none my-10"
-            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg1.svg"
-            alt="how it work"
-          />
-          <img
-            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg4.svg"
-            alt=""
-          />
-          <div className="mt-10">
-            <h1 className="text-xl text-center tracking-wide leading-5 font-bold">
-              SignUp for an Account
-            </h1>
-            <h2 className="text-gray-500 mt-3 text-center text-base leading-6 tracking-wide">
-              Sign up on our website and opt for a program that suits you the
-              best .
-            </h2>
-          </div>
-          <img
-            className="focus:outline-none my-10"
-            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg5.svg"
-            alt=""
-          />
-          <img
-            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg2.svg"
-            alt=""
-          />
-          <div className="mt-10">
-            <h1 className="text-xl tracking-wide text-center leading-5 font-bold">
-              Create a Wallet
-            </h1>
-            <h2 className="text-gray-500 mt-3 pl-3 text-center text-base leading-6 tracking-wide">
-              Create a wallet by linking a payment method that you’re
-              comfortable with. Paypal, Visa and more
-            </h2>
-          </div>
-          <img
-            className="focus:outline-none my-10"
-            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg3.svg"
-            alt=""
-          />
-          <img
-            src="https://tuk-cdn.s3.amazonaws.com/can-uploader/3_step_center_aligned_how_it_worksSvg6.svg"
-            alt=""
-          />
-          <div className="flex mt-10 flex-col items-center md:items-start md:w-8/12">
-            <h1 className="text-xl text-center tracking-wide leading-5 font-bold">
-              Start your Transactions
-            </h1>
-            <h2 className="text-gray-500 mt-3 text-center text-base leading-6 tracking-wide">
-              Start transactions right away. No more complicated process for
-              anything else.
-            </h2>
+      </div>
+      <div className="w-full bg-gray-100 px-10 pt-10">
+        <div className="container mx-auto">
+          <div className="lg:flex md:flex sm:flex items-center xl:justify-between flex-wrap md:justify-around sm:justify-around lg:justify-around">
+            {team_data.map((item, index) => (
+            <div key={index} className="xl:w-1/3 sm:w-3/4 md:w-2/5 relative mt-16 mb-32 sm:mb-24 xl:max-w-sm lg:w-2/5">
+                <div className="rounded overflow-hidden shadow-md bg-white">
+                  <div className="absolute -mt-20 w-full flex justify-center">
+                    <div className="h-32 w-32">
+                      <img
+                        src={item.img}
+                        className="rounded-full object-cover h-full w-full shadow-md"
+                        alt="team member Image"
+                      />
+                    </div>
+                  </div>
+                  <div className="px-6 mt-16">
+                    <div className="font-bold text-3xl text-center pb-1">
+                     {item.name}
+                    </div>
+                    <p className="text-gray-800 text-sm text-center">
+                      {item.role}
+                    </p>
+                    <p className="text-center text-gray-600 text-base pt-3 font-normal"></p>
+                    <div className="w-full flex justify-center pt-5 pb-5">
+                      <a href="/" className="mx-5">
+                        <div>
+                          <AiFillMail size={24} />
+                        </div>
+                      </a>
+                      <a href="/" className="mx-5">
+                        <div>
+                          <FaTelegram size={24} />
+                        </div>
+                      </a>
+                      <a href="/" className="mx-5">
+                        <div>
+                          <FaLinkedin size={24} />
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                
+            </div>
+            ))}
           </div>
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+}
+
 export default Index;

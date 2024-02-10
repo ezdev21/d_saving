@@ -12,9 +12,8 @@ const poppins = Poppins({ subsets: ['latin'], weight:['200', '400', '600'] })
 
 const heroContent = {
   text: {
-    subheading: "Smart Savings, Brighter Tomorrows",
-    heading: "Savings Made Simple One Click Away.",
-    desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis blanditiis iusto incidunt perspiciatis, corporis velit saepe cumque soluta tempora quis dolor quidem maiores expedita non tempore, cum commodi harum mollitia. ",
+    heading: "Empowering Visually Impaired Students in Learning",
+    desc: "Digital Inclusion, Equal Education: Bridging the Gap for Visually Impaired Learners.Empowering visually impaired learners through accessible online education. Providing equal opportunities, support, and tools for success in their academic journey. Join us today ",
   },
 };
 
@@ -31,8 +30,8 @@ const Hero = () => {
             <div className="lg:w-5/12 mb:10 lg:mb-0">
 
               {heroContent.text.heading && (
-                <h1 className={`text-6xl font-extrabold mb-7 uppercase ${poppins.className}`} >
-                  Savings Made Simple <span className="text-indigo-600 bg-indigo-50"> One Click</span> Away.
+                <h1 className={`text-5xl font-extrabold mb-7 ${poppins.className}`} >
+                  {heroContent.text.heading}
                 </h1>
               )}
 
@@ -45,7 +44,7 @@ const Hero = () => {
               <div className="flex max-md:flex-col md:space-x-3 text-center ">
                 <Link
                   href="/about"
-                  className="flex gap-2 items-center justify-center text-[16px] max-md:mb-3 py-3 px-10 max-md:text-lg  bg-indigo-700 text-slate-50 font-bold font-sans rounded-lg duration-300 transition-all ease-in-out hover:bg-indigo-500 hover:shadow-lg relative top-0 hover:-top-1"
+                  className="flex gap-2 items-center justify-center text-[16px] max-md:mb-3 py-3 px-10 max-md:text-lg  bg-yellow-500 text-slate-50 font-bold font-sans rounded-lg duration-300 transition-all ease-in-out hover:bg-yellow-600 hover:shadow-lg relative top-0 hover:-top-1"
                 >
                   Learn more 
                   <span><HiArrowLongRight size={25}/></span>
@@ -54,7 +53,7 @@ const Hero = () => {
               </div>
             </div>
 
-            <div className="relative lg:w-6/12 space-y-2 max-lg:mt-3 flex justify-center p-10 bg-indigo-50 rounded-ss-full rounded-r-full">
+            <div className="relative lg:w-6/12 space-y-2 max-lg:mt-3 flex justify-center p-10 bg-yellow-50 rounded-ss-full rounded-r-full">
                <Image src={"/bg.png"} width={500} height={500} alt="Image">
                </Image>
             </div>

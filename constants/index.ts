@@ -2,9 +2,42 @@
 
 export const nav_links = [
   { href: "/", key: "home", label: "Home" },
-  { href: "/How-it-works", key: "How-it-works", label: "How it works?" },
   { href: "/contact", key: "contact ", label: "Contact us" },
   { href: "/about", key: "about ", label: "About Us" },
+];
+
+export const team_data = [
+  {
+    name: "Eman Seid",
+    role: "Marketing Manager",
+    img: "/berhan.jpg",
+  },
+  {
+    name: "Eyuel Mamuye",
+    role: "UI/UX specialist",
+    img: "/berhan.jpg",
+  },
+  {
+    name: "Kelkias Selamu",
+    role: "Sofware Developer",
+    img: "/berhan.jpg",
+  },
+  {
+    name: "Dawit Mellese",
+    role: "Sofware Developer",
+    img: "/berhan.jpg",
+  },
+
+  {
+    name: "Segni",
+    role: "Sofware Developer",
+    img: "/berhan.jpg",
+  },
+  {
+    name: "Nahom",
+    role: "Sofware Developer",
+    img: "/berhan.jpg",
+  },
 ];
 
 export const features = [
