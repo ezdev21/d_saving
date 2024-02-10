@@ -17,7 +17,7 @@ const About3 = () => {
       <div className="flex lg:flex-row flex-col lg:gap-8 sm:gap-10 gap-12">
         <div className="w-full lg:w-6/12">
           <h2 className="w-full font-bold lg:text-4xl text-3xl lg:leading-10 leading-9">
-            We are here to make saving easy and delightfull for everyone
+          Empowering Visually Impaired Learners Through Inclusive Online Education.
           </h2>
           <p className="font-normal text-base leading-6 text-gray-600 mt-6">
             At our company, we are dedicated to revolutionizing online education
