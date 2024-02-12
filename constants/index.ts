@@ -10,22 +10,22 @@ export const team_data = [
   {
     name: "Eman Seid",
     role: "Marketing Manager",
-    img: "/berhan.jpg",
+    img: "/eman.jpg",
   },
   {
     name: "Eyuel Mamuye",
-    role: "UI/UX specialist",
-    img: "/berhan.jpg",
+    role: "UI/UX Specialist",
+    img: "/eyu.JPG",
   },
   {
     name: "Kelkias Selamu",
     role: "Sofware Developer",
-    img: "/berhan.jpg",
+    img: "/kel.jpg",
   },
   {
     name: "Dawit Mellese",
-    role: "Sofware Developer",
-    img: "/berhan.jpg",
+    role: "Frontend Developer",
+    img: "/david.jpg",
   },
 
   {

@@ -54,10 +54,10 @@ const Footer = () => {
                 About
               </Link>
               <Link
-                href="/news"
+                href="/contact"
                 className="py-2 text-sm hover:text-gray-200"
               >
-                News
+                Contact
               </Link>
             </ul>
           </div>
@@ -68,7 +68,7 @@ const Footer = () => {
                 Call Us: +251-900-578275 | +251-938-071193
               </li>
               <li className="py-2 text-sm">
-                Email Us: berhanplatform7@gmial.com
+                Email Us: berhan@addisphoenix.com
               </li>
               <li className="py-2 text-sm">
                 Address: Addis Ababa, Ethiopia

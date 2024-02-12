@@ -50,10 +50,7 @@ export default function Feature() {
               Online Exam Platform
               </h2>
               <p className="text-gray-600 text-[13px]">
-                Enabling automatic savings by rounding up transactions to the
-                nearest dollar or through micro-savings with each purchase. This
-                hands-free approach facilitates effortless savings accumulation
-                without disrupting spending habits.
+              Seamlessly take exams online through our dedicated platform, offering a user-friendly interface and customizable settings for accessibility. Experience secure and efficient exam sessions tailored to meet your academic requirements.
               </p>
             </div>
 
