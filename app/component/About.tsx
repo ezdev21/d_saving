@@ -2,6 +2,7 @@ import React from "react";
 import { FaTelegram, FaLinkedin, FaMailchimp } from "react-icons/fa";
 import { AiFillMail } from "react-icons/ai";
 import { team_data } from "@/constants";
+import Image from "next/image";
 
 
 
@@ -26,8 +27,10 @@ function Index() {
                 <div className="rounded overflow-hidden shadow-md bg-white">
                   <div className="absolute -mt-20 w-full flex justify-center">
                     <div className="h-32 w-32">
-                      <img
+                      <Image
                         src={item.img}
+                        width={200}
+                        height={200}
                         className="rounded-full object-cover h-full w-full shadow-md"
                         alt="team member Image"
                       />
