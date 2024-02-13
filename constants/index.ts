@@ -29,12 +29,12 @@ export const team_data = [
   },
 
   {
-    name: "Segni",
+    name: "Sagni Alemayehu",
     role: "Sofware Developer",
-    img: "/berhan.jpg",
+    img: "/segni.jpg",
   },
   {
-    name: "Nahom",
+    name: "Nahom Temam",
     role: "Sofware Developer",
     img: "/berhan.jpg",
   },
